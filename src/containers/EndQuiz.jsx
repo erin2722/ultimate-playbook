@@ -1,11 +1,11 @@
 import HomeButton from '../components/HomeButton';
 import { Container, Row, Col } from 'react-bootstrap';
 
-const EndQuiz = () => {
+const EndQuiz = ({ correctAnswers }) => {
     return (
         <Container>
             <Row className="text-center mt-5">
-                <h1 className="m-auto">Congratulations, you got {} plays correct.</h1>
+                <h1 className="m-auto">Congratulations, you got {correctAnswers} plays correct.</h1>
             </Row>
 
             <Row className="mt-5">

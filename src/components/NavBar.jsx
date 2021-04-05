@@ -10,10 +10,10 @@ const NavBar = () => {
                     <Navbar.Brand href="/">Ultimate Frisbee Playbook</Navbar.Brand>
                 </Link>
                 <Navbar.Collapse className="justify-content-end">
-                    <Link to="/credits">
+                    <Link to="/learn">
                         <Nav.Link href="/">Learn</Nav.Link>
                     </Link>
-                    <Link to="/credits">
+                    <Link to="/quiz">
                         <Nav.Link href="/">Quiz</Nav.Link>
                     </Link>
                 </Navbar.Collapse>
