@@ -17,9 +17,6 @@ const LearnPlay= () => {
     return (
         <Container fluid>
             <Row className="mt-5 px-5">
-                <NextButton link="/learn" text="Back to Plays" forward={false} />
-            </Row>
-            <Row className="mt-5 px-5">
                 <h2>{play.name}</h2>
             </Row>
             <Row className="mt-5 px-5">
@@ -43,6 +40,9 @@ const LearnPlay= () => {
                         })
                     }
                 </Col>
+            </Row>
+            <Row className="mt-5 px-5">
+                <NextButton link="/learn" text="Back to Plays" forward={false} />
             </Row>
         </Container>
     )
