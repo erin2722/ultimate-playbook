@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const HomeButton = ({text, link}) => {
     return (
-        <a href={link}>
+        <Link to="/learn">
             <Button variant="success" size="lg">
                 {text}
             </Button>
-        </a>
+        </Link>
     )
 }
 
