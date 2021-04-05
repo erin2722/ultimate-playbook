@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ultimate-playbook/static/css/main.1ff4bbac.chunk.css",
-    "main.js": "/ultimate-playbook/static/js/main.b1a40a55.chunk.js",
-    "main.js.map": "/ultimate-playbook/static/js/main.b1a40a55.chunk.js.map",
+    "main.js": "/ultimate-playbook/static/js/main.d6b6c99c.chunk.js",
+    "main.js.map": "/ultimate-playbook/static/js/main.d6b6c99c.chunk.js.map",
     "runtime-main.js": "/ultimate-playbook/static/js/runtime-main.eb72af53.js",
     "runtime-main.js.map": "/ultimate-playbook/static/js/runtime-main.eb72af53.js.map",
     "static/css/2.ef9168ec.chunk.css": "/ultimate-playbook/static/css/2.ef9168ec.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.ef9168ec.chunk.css",
     "static/js/2.411795cf.chunk.js",
     "static/css/main.1ff4bbac.chunk.css",
-    "static/js/main.b1a40a55.chunk.js"
+    "static/js/main.d6b6c99c.chunk.js"
   ]
 }
