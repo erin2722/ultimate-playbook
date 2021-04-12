@@ -1,3 +1,5 @@
+import play_moves from "./play_moves";
+
 const plays = [
     {
         id: "1",
@@ -21,7 +23,8 @@ const plays = [
                 question: "Why is this useful?",
                 answer: "It organizes players to make sure one person has space to recieve the disc."
             }
-        ]
+        ],
+        play_moves: play_moves["Vertical Stack"]
     },
     {
         id: "2",

@@ -1,5 +1,6 @@
 import HomeButton from '../components/HomeButton';
 import { Container, Row, Col } from 'react-bootstrap';
+import Field from '../components/Field';
 
 const Home = () => {
     return (
