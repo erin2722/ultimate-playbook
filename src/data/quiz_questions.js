@@ -1,59 +1,64 @@
 const quiz_questions = [
     {
-        img: "http://www.catchthespirit.co.uk/wp-content/uploads//2010/03/Page-89_new.bmp",
+        img: "https://ui-design-final.s3.amazonaws.com/vert-stack-quiz.png",
         options: [
             "Horizontal Stack",
             "Vertical Stack",
-            "Zone Offense",
-            "Cup Defense"
+            "Endzone Offense",
+            "Side Stack"
         ],
         answer: "Vertical Stack",
+        firstMover: "0",
         explination: `Vertical Stack is the most common offensive play in ultimate. 
             We use it to organize our offense and make space for players to recieve the disk.`
     },
     {
-        img: "https://www.catchthespirit.co.uk/wp-content/uploads/2010/03/Formation-2-C62.png",
+        img: "https://ui-design-final.s3.amazonaws.com/horizontal-stack-quiz.png",
         options: [
-            "Horizontal Stack",
             "Vertical Stack",
-            "Cup Defense",
-            "Junk Defense"
+            "Side Stack",
+            "Endzone Offense",
+            "Horizontal Stack",
         ],
+        firstMover: "3",
         answer: "Horizontal Stack",
         explination: `Horizontal Stack creates passing space for the recievers.`
     },
     {
-        img: "https://www.catchthespirit.co.uk/wp-content/uploads/2010/03/ZONE.png",
+        img: "https://ui-design-final.s3.amazonaws.com/endzone-quiz.png",
         options: [
-            "Horizontal Stack",
             "Vertical Stack",
-            "Zone Offense",
-            "Junk Defense"
+            "Side Stack",
+            "Endzone Offense",
+            "Horizontal Stack",
         ],
-        answer: "Zone Offense",
-        explination: `The zone offense is a response to the defensive zone defense!`
+        answer: "Endzone Offense",
+        firstMover: "4",
+        explination: `We use this play in a tight space in the endzone.`
     },
     {
-        img: "http://www.catchthespirit.co.uk/wp-content/uploads//2010/03/Cup.png",
+        img: "https://ui-design-final.s3.amazonaws.com/side-stack-quiz.png",
         options: [
             "Horizontal Stack",
-            "Cup Defense",
-            "Zone Offense",
-            "Junk Defense"
+            "Endzone Offense",
+            "Side Stack",
+            "Scallywag"
         ],
-        answer: "Cup Defense",
-        explination: `Cup defense can be used to throw off teams with weak handlers.`
+        firstMover: "0",
+        answer: "Side Stack",
+        explination: `The side stack opens up most of the field for big cuts.`
     },
     {
-        img: "http://www.catchthespirit.co.uk/wp-content/uploads//2010/03/Junk.png",
+        img: "https://ui-design-final.s3.amazonaws.com/scallywag-quiz.png",
         options: [
-            "Cup Defense",
-            "Vertical Stack",
-            "Zone Offense",
-            "Junk Defense"
+            "Horizontal Stack",
+            "Endzone Offense",
+            "Side Stack",
+            "Scallywag"
         ],
-        answer: "Junk Defense",
-        explination: `Junk is the most common form of zone defense.`
+        answer: "Scallywag",
+        firstMover: "2",
+        explination: `Scallywag makes space for deep cuts.`
     }
 ];
 

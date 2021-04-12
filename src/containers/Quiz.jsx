@@ -12,6 +12,7 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
     const history = useHistory();
     const [question, setQuestion] = useState(0);
     const [selected, setSelected] = useState(-1);
+    const [playerNum, setPlayerNum] = useState('');
     const [correct, setCorrect] = useState(false);
     const [submitted, setSubmitted] = useState(false);
 
@@ -26,8 +27,9 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
     };
 
     const submit = () => {
-        setCorrect(selected === questions[question].answer);
-        if(selected === questions[question].answer) {
+        setCorrect(selected === questions[question].answer && playerNum === questions[question].firstMover);
+        setPlayerNum('');
+        if(selected === questions[question].answer && playerNum === questions[question].firstMover) {
             setCorrectAnswers(correctAnswers + 1);
         }
         setSubmitted(true);
@@ -35,25 +37,26 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
 
     return (
         <Container fluid>
-            <Row className="mt-5 px-5">
+            <Row className="mt-2 px-5">
                 <h2>Quiz</h2>
-            </Row>
-            <Row className="mt-1 px-5">
-                <h5>Match the image with the play name describing it</h5>
             </Row>
             {
                 submitted && (
                     <Alert variant={correct ? 'success' : 'danger'}>
-                        <strong>{correct ? 'Correct!' : 'Incorrect.'} This play is a {questions[question].answer}</strong>
+                        <strong>{correct ? 'Correct!' : 'Incorrect.'} 
+                            This play is a {questions[question].answer}. 
+                            Player {questions[question].firstMover} makes the first cut.
+                        </strong>
                         <div>{questions[question].explination}</div>
                     </Alert>
                 )
             }
-            <Row className="mt-5 px-5">
+            <Row className="mt-2 px-5">
                 <Col>
                     <Image src={questions[question].img} alt={questions[question]} />
                 </Col>
                 <Col className="text-center">
+                    <h5>Match the image with the play name describing it</h5>
                     {
                         questions[question].options.map((option, index) => (
                             <>
@@ -70,9 +73,17 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
                             </>
                         ))
                     }
+                    <h5 className="mt-4">
+                        Which player cuts first? Enter their number here:
+                    </h5>
+                    <input 
+                        type='text' 
+                        value={playerNum}
+                        onChange={e => setPlayerNum(e.target.value)}
+                    />
                 </Col>
             </Row>
-            <Row className="mt-5 px-5 float-right">
+            <Row className="px-5 float-right">
                 {
                     submitted ? (
                         <Button 

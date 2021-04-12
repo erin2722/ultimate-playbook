@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const PlayerDiv = styled.div`
@@ -10,7 +10,9 @@ const PlayerDiv = styled.div`
     border: ${props => props.highlight ? '4px solid yellow' : 'none'};
     top: ${props => `${props.top}rem`};
     left: ${props => `${props.left}rem`};
-    transition: top 3s, left 3s;
+    transition: top 2s, left 2s;
+
+    text-align: center;
 `;
 
 const Disc = styled.div`
@@ -20,34 +22,18 @@ const Disc = styled.div`
     border-radius: 50%;
     background-color: white;
     top: ${props => `${props.top + 0.75}rem`};
-    left: ${props => `${props.left + 1.1}rem`};
-    transition: top 3s, left 3s;
+    left: ${props => `${props.left + 1.5}rem`};
+    transition: top 2s, left 2s;
 `;
 
-const timer = ms => new Promise(res => setTimeout(res, ms));
-
-const Player = ({playerMoves}) => {
-    const { initialLeft, initialTop, moves, firstMover, hasDisc } = playerMoves;
-
-    const [top, setTop] = useState(initialTop);
-    const [left, setLeft] = useState(initialLeft);
-    const [highlight, setHighlight] = useState(firstMover);
-
-    const move = async () => {
-        setHighlight(false);
-        for (var i = 0; i < moves.length; i++) {
-            setTop(moves[i].top);
-            setLeft(moves[i].left);
-            await timer(3000);
-        }
-    };
-
+const Player = ({playerMoves, move, index}) => {
     return (
         <>
-            <PlayerDiv top={top} left={left} highlight={highlight} onClick={move} />
+            <PlayerDiv top={playerMoves.initialTop} left={playerMoves.initialLeft} 
+                highlight={playerMoves.firstMover} onClick={() => move(index)} />
             {
-                hasDisc && (
-                    <Disc top={top} left={left} />
+                playerMoves.hasDisc && (
+                    <Disc top={playerMoves.initialTop} left={playerMoves.initialLeft} />
                 )
             }
         </>

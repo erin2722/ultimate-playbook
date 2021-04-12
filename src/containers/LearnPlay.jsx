@@ -22,6 +22,7 @@ const LearnPlay= () => {
             </Row>
             <Row className="mt-2 px-5">
                 <Col>
+                    <h6>Click on the yellow highlighted dot to see the play in action!</h6>
                     <Field playData={play.play_moves} />
                 </Col>
                 <Col>
