@@ -34,17 +34,19 @@ const LearnPlay= () => {
                         <p>
                             {play.description}
                         </p>
-                        <h4 className="mt-4">Frequently asked questions</h4>
-                        {
-                            play.faqs.map(faq => {
-                                return (
-                                    <>
-                                        <strong>{faq.question}</strong>
-                                        <p>{faq.answer}</p>
-                                    </>
-                                )
-                            })
-                        }
+                        <div className="pb-5">
+                            <h4 className="mt-4">Frequently asked questions</h4>
+                            {
+                                play.faqs.map(faq => {
+                                    return (
+                                        <>
+                                            <strong>{faq.question}</strong>
+                                            <p>{faq.answer}</p>
+                                        </>
+                                    )
+                                })
+                            }
+                        </div>
                         <div className="mt-5">
                             <NextButton link="/learn" text="Back to Plays" forward={false} />
                         </div>

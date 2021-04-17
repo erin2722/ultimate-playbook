@@ -55,13 +55,13 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
                 <Col md="auto">
                     <Image src={questions[question].img} alt={questions[question]} />
                 </Col>
-                <Col className="text-center">
+                <Col className="ml-4">
                     <h4>Which play is this?</h4>
                     {
                         questions[question].options.map((option) => (
                             <>
                                 <Button 
-                                    className="my-3 mx-3"
+                                    className="my-3 mx-2"
                                     variant="outline-dark" 
                                     size="lg"
                                     onClick={() => setSelected(option)}
@@ -72,18 +72,21 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
                             </>
                         ))
                     }
-                    <h4 className="mt-4 mb-2">
-                        Which player cuts first?
-                    </h4>
-                    Enter their number here:{" "}
-                    <input 
-                        type='text' 
-                        placeholder='3'
-                        value={playerNum}
-                        onChange={e => setPlayerNum(e.target.value)}
-                    />
-                    <br></br>
-                    <div className="float-right my-5">
+                    <div className="py-5">
+                        <h4 className="mt-4 mb-2">
+                            Which player cuts first?
+                        </h4>
+                        <div className="px-2">
+                            Enter their number here:{" "}
+                            <input 
+                                type='text' 
+                                placeholder='3'
+                                value={playerNum}
+                                onChange={e => setPlayerNum(e.target.value)}
+                            />
+                        </div>
+                    </div>
+                    <div className="float-right pt-5 mt-5">
                         {
                             submitted ? (
                                 <Button 
