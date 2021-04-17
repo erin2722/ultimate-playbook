@@ -16,12 +16,12 @@ const plays = [
                 answer: "It organizes players to make sure one person has space to recieve the disc."
             },
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "What should I do at the end of my cut?",
+                answer: "Sprint back to the stack as quickly as possible to make room for the next cutter."
             },
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "How do we know who cuts first?",
+                answer: "One person should yell first cut and put themselves at the back of the stack."
             }
         ],
         play_moves: play_moves["Vertical Stack"]
@@ -35,16 +35,13 @@ const plays = [
             space in front and behind the receivers.`,
         faqs: [
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "How will this allow for deep cuts?",
+                answer: "As shown in the animation, one player can cut deep while another players cuts in. This divides the defenders."
             },
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
-            },
-            {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "Which person should cut deep?",
+                answer: `We should never have deep throws occuring on the same third of the field, so the player on the 
+                    opposite side of the field as the handler should cut deep.`
             }
         ],
         play_moves: play_moves["Horizontal Stack"]
@@ -58,16 +55,13 @@ const plays = [
             relatively tight area. Make sure to indicate who the 'iso' is as you set up this play.`,
         faqs: [
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "How do we know who cuts?",
+                answer: "Somebody will yell '_____ iso' at the beginning of the play, and they are the primary cutter."
             },
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
-            },
-            {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "What is the job of the other players?",
+                answer: `Their primary job is to stay out of the way of the action-- the challenge of this play is that 
+                    it occurs in such a tight space, so making space for others is essential.`
             }
         ],
         play_moves: play_moves["Endzone Offense"]
@@ -82,15 +76,11 @@ const plays = [
         faqs: [
             {
                 question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                answer: "It makes way more space in the center of the field, allowing for more ambitious cuts."
             },
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
-            },
-            {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "Do we usually stay like this for the whole possesion?",
+                answer: "No, generally we will migrate back to the center of the field after a few cuts with the side stack."
             }
         ],
         play_moves: play_moves["Side Stack"]
@@ -106,16 +96,8 @@ const plays = [
         `,
         faqs: [
             {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
-            },
-            {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
-            },
-            {
-                question: "Why is this useful?",
-                answer: "It organizes players to make sure one person has space to recieve the disc."
+                question: "When might we use this?",
+                answer: "Scallwag can be helpful as a play early in the possession to allow for deep cuts."
             }
         ],
         play_moves: play_moves["Scallywag"]

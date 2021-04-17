@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Button } from 'react-bootstrap';
 import Player from './Player';
 
 const FieldWrap = styled.div`
@@ -22,6 +23,12 @@ const EndzoneLine2 = styled.div`
     border-bottom: 1px solid white;
 `;
 
+const Refresh = styled.div`
+    position: absolute;
+    bottom: 0;
+    margin: 0.5rem;
+`;
+
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
 //create your forceUpdate hook
@@ -33,6 +40,8 @@ function useForceUpdate(){
 const Field = ({ playData }) => {
     const [play, setPlay] = useState(playData);
     const forceUpdate = useForceUpdate();
+
+    const initialState = playData;
 
     function pass() {
         const tempPlay = play;
@@ -71,6 +80,13 @@ const Field = ({ playData }) => {
                 ))
             }
             <EndzoneLine2 />
+            <Refresh>
+                <Button variant="dark" onClick={() => {
+                    window.location.reload(false);
+                }}>
+                    <i className="fas fa-sync-alt"></i>
+                </Button>
+            </Refresh>
         </FieldWrap>
     )
 };

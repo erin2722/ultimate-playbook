@@ -20,6 +20,7 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
         if(question + 1 < questions.length) {
             setQuestion(question + 1);
             setSelected(-1);
+            setPlayerNum('');
             setSubmitted(false);
         } else {
             history.push("/quiz-end");
@@ -28,7 +29,6 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
 
     const submit = () => {
         setCorrect(selected === questions[question].answer && playerNum === questions[question].firstMover);
-        setPlayerNum('');
         if(selected === questions[question].answer && playerNum === questions[question].firstMover) {
             setCorrectAnswers(correctAnswers + 1);
         }
@@ -37,13 +37,13 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
 
     return (
         <Container fluid>
-            <Row className="mt-2 px-5">
-                <h2>Quiz</h2>
+            <Row className="mt-4 px-5">
+                <h3>Test Your Knowledge</h3>
             </Row>
             {
                 submitted && (
                     <Alert variant={correct ? 'success' : 'danger'}>
-                        <strong>{correct ? 'Correct!' : 'Incorrect.'} 
+                        <strong>{correct ? 'Correct! ' : 'Incorrect. '} 
                             This play is a {questions[question].answer}. 
                             Player {questions[question].firstMover} makes the first cut.
                         </strong>
@@ -52,16 +52,16 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
                 )
             }
             <Row className="mt-2 px-5">
-                <Col>
+                <Col md="auto">
                     <Image src={questions[question].img} alt={questions[question]} />
                 </Col>
                 <Col className="text-center">
-                    <h5>Match the image with the play name describing it</h5>
+                    <h4>Which play is this?</h4>
                     {
-                        questions[question].options.map((option, index) => (
+                        questions[question].options.map((option) => (
                             <>
                                 <Button 
-                                    className="my-3"
+                                    className="my-3 mx-3"
                                     variant="outline-dark" 
                                     size="lg"
                                     onClick={() => setSelected(option)}
@@ -69,42 +69,44 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
                                 >
                                     {option}
                                 </Button>
-                                <br></br>
                             </>
                         ))
                     }
-                    <h5 className="mt-4">
-                        Which player cuts first? Enter their number here:
-                    </h5>
+                    <h4 className="mt-4 mb-2">
+                        Which player cuts first?
+                    </h4>
+                    Enter their number here:{" "}
                     <input 
                         type='text' 
+                        placeholder='3'
                         value={playerNum}
                         onChange={e => setPlayerNum(e.target.value)}
                     />
+                    <br></br>
+                    <div className="float-right my-5">
+                        {
+                            submitted ? (
+                                <Button 
+                                    className="my-3" 
+                                    variant="success" 
+                                    size="lg"
+                                    onClick={() => next()}
+                                >
+                                    Next Question
+                                </Button>
+                            ) : (
+                                <Button 
+                                    className="my-3" 
+                                    variant="success" 
+                                    size="lg"
+                                    onClick={() => submit()}
+                                >
+                                    Submit
+                                </Button>
+                            )
+                        }
+                    </div>
                 </Col>
-            </Row>
-            <Row className="px-5 float-right">
-                {
-                    submitted ? (
-                        <Button 
-                            className="my-3" 
-                            variant="success" 
-                            size="lg"
-                            onClick={() => next()}
-                        >
-                            Next Question
-                        </Button>
-                    ) : (
-                        <Button 
-                            className="my-3" 
-                            variant="success" 
-                            size="lg"
-                            onClick={() => submit()}
-                        >
-                            Submit
-                        </Button>
-                    )
-                }
             </Row>
         </Container>
     )

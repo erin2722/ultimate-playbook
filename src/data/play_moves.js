@@ -118,7 +118,7 @@ const play_moves = {
                 initialLeft: 5,
                 moves: [],
                 firstMover: false,
-                hasDisc: false,
+                hasDisc: true,
                 getsDisc: false
             },
             {
@@ -134,12 +134,12 @@ const play_moves = {
                 initialLeft: 25,
                 moves: [],
                 firstMover: false,
-                hasDisc: true,
+                hasDisc: false,
                 getsDisc: false
             }
             
         ],
-        discMove: [6, 3]
+        discMove: [4, 3]
     },
     "Endzone Offense": {
         players: [
