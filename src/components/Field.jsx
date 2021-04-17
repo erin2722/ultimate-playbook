@@ -82,7 +82,7 @@ const Field = ({ playData }) => {
             <EndzoneLine2 />
             <Refresh>
                 <Button variant="dark" onClick={() => {
-                    window.location.reload(false);
+                    window.location.reload();
                 }}>
                     <i className="fas fa-sync-alt"></i>
                 </Button>

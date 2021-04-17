@@ -14,7 +14,7 @@ function App() {
   const [correctAnswers, setCorrectAnswers] = useState(0);
 
   return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/ultimate-playbook">
         <NavBar />
         <Switch>
             <Route exact path='/' component={Home} />
