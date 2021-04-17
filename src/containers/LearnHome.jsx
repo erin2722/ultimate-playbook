@@ -31,9 +31,11 @@ const LearnHome = () => {
                 </Row>
                 <Row>
                     <h4>Or go to the {" "}
+                    <strong>
                         <Link to='/glossary'>
                             glossary of terms <i class="fas fa-external-link-alt"></i>
                         </Link>
+                    </strong>
                         {" "}to brush up on your ultimate terms.
                     </h4>
                 </Row>
