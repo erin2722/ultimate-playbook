@@ -34,14 +34,13 @@ const timer = ms => new Promise(res => setTimeout(res, ms));
 //create your forceUpdate hook
 function useForceUpdate(){
     const [value, setValue] = useState(0); // integer state
+    console.log(value);
     return () => setValue(value => value + 1); // update the state to force render
 }
 
 const Field = ({ playData }) => {
     const [play, setPlay] = useState(playData);
     const forceUpdate = useForceUpdate();
-
-    const initialState = playData;
 
     function pass() {
         const tempPlay = play;

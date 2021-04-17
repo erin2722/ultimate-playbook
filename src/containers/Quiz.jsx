@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Container, Row, Col, Button, Alert } from 'react-bootstrap';
 import { useHistory } from "react-router-dom";
@@ -42,7 +42,7 @@ const Quiz= ({ correctAnswers, setCorrectAnswers }) => {
             </Row>
             {
                 submitted && (
-                    <Alert variant={correct ? 'success' : 'danger'}>
+                    <Alert variant={correct ? 'success' : 'danger'} className="mt-1 mx-5">
                         <strong>{correct ? 'Correct! ' : 'Incorrect. '} 
                             This play is a {questions[question].answer}. 
                             Player {questions[question].firstMover} makes the first cut.
